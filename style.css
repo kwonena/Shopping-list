@@ -27,8 +27,6 @@ body {
     background: #654ea3;
     background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
     background: linear-gradient(to right, #eaafc8, #654ea3);
-
-
 }
 
 .title {
@@ -75,8 +73,6 @@ body {
 .listBox {
     margin-left: 20px;
 }
-
-.listText {}
 
 .list {
     color: black;
