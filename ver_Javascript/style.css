@@ -44,7 +44,7 @@ body {
     margin-top: -14px;
 }
 
-#plusBtn {
+.plusBtn {
     border: none;
     border-radius: 50px;
     width: 50px;
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-#textBox {
+.textBox {
     position: absolute;
     bottom: 0;
     left: 0;
