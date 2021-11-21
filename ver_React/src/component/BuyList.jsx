@@ -11,6 +11,7 @@ function List({ list, onDelete, onToggle }) {
         style={{
           cursor: "pointer",
           textDecoration: active ? "line-through" : "none",
+          color: active ? "gray" : "black",
         }}
       >
         {text}
