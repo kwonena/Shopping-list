@@ -9,40 +9,6 @@ function App(props) {
   });
   const { text } = inputs;
 
-  const onDelete = (id) => {
-    setLists(lists.filter((list) => list.id !== id));
-  };
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
-
-  const nextId = useRef(4);
-
-  const onAdd = () => {
-    const list = {
-      id: nextId.current,
-      ...inputs,
-    };
-    setLists(lists.concat(list));
-    setInputs({
-      text: "",
-    });
-    nextId.current += 1;
-  };
-
-  const onToggle = (id) => {
-    setLists(
-      lists.map((list) =>
-        list.id === id ? { ...list, active: !list.active } : list
-      )
-    );
-  };
-
   const [lists, setLists] = useState([
     {
       id: 1,
@@ -60,6 +26,44 @@ function App(props) {
       active: false,
     },
   ]);
+
+  const nextId = useRef(4);
+
+  const onDelete = (id) => {
+    setLists(lists.filter((list) => list.id !== id));
+  };
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+
+  const onAdd = () => {
+    if (text !== "") {
+      const list = {
+        id: nextId.current,
+        ...inputs,
+      };
+      setLists(lists.concat(list));
+      setInputs({
+        text: "",
+      });
+      nextId.current += 1;
+    } else {
+      alert("텍스트를 입력해주세요!");
+    }
+  };
+
+  const onToggle = (id) => {
+    setLists(
+      lists.map((list) =>
+        list.id === id ? { ...list, active: !list.active } : list
+      )
+    );
+  };
 
   return (
     <div className="app">
