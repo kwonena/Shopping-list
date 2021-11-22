@@ -34,6 +34,7 @@ button {
     background: #654ea3;
     background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
     background: linear-gradient(to right, #eaafc8, #654ea3);
+    position: relative;
 }
 
 .title {
@@ -45,40 +46,11 @@ button {
 }
 
 .monitor {
-    position: relative;
     background-color: rgb(245, 245, 245);
     width: 450px;
     height: 520px;
     margin-top: -14px;
-}
-
-.addBtn {
-    border: none;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: 35px;
-    text-align: center;
-    margin-top: 363px;
-    cursor: pointer;
-    position: absolute;
-    bottom: -60px;
-    left: 200px;
-}
-
-.textBox {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    width: 438px;
-    height: 40px;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: large;
-    padding-left: 10px;
+    overflow: auto;
 }
 
 .list {
@@ -88,7 +60,7 @@ button {
     font-weight: bolder;
     list-style: none;
     display: block;
-    margin: 10px 20px;
+    margin: 10px 15px;
 }
 
 .listText {
@@ -99,7 +71,8 @@ button {
     list-style: none;
     padding-top: 15px;
     display: inline-block;
-    width: 380px;
+    width: 370px;
+    margin-left: 10px;
 }
 
 .deleteBtn {
@@ -113,4 +86,33 @@ button {
 .deleteBtn:hover {
     color: red;
     transform: scale(1.1);
+}
+
+.textBox {
+    position: absolute;
+    bottom: 69px;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 438px;
+    height: 40px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    padding-left: 10px;
+}
+
+.addBtn {
+    position: absolute;
+    bottom: 10px;
+    left: 200px;
+    border: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 363px;
+    cursor: pointer;
 }
