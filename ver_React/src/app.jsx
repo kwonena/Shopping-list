@@ -65,6 +65,10 @@ function App(props) {
     );
   };
 
+  const onEnter = (e) => {
+    if (e.key === "Enter") onAdd();
+  };
+
   return (
     <div className="app">
       <h3 class="title">Shopping List</h3>
@@ -75,7 +79,12 @@ function App(props) {
           onDelete={onDelete}
           onChange={onChange}
         />
-        <CreateList text={text} onAdd={onAdd} onChange={onChange} />
+        <CreateList
+          text={text}
+          onAdd={onAdd}
+          onEnter={onEnter}
+          onChange={onChange}
+        />
       </div>
     </div>
   );

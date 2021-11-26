@@ -48,7 +48,7 @@ button {
 .monitor {
     background-color: rgb(245, 245, 245);
     width: 450px;
-    height: 520px;
+    height: 480px;
     margin-top: -14px;
     overflow: auto;
 }

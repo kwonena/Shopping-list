@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateList({ text, onChange, onAdd }) {
+function CreateList({ text, onChange, onAdd, onEnter }) {
   return (
     <div>
       <input
@@ -9,6 +9,7 @@ function CreateList({ text, onChange, onAdd }) {
         placeholder="Please enter your shopping list🎁"
         value={text}
         onChange={onChange}
+        onKeyPress={onEnter}
       />
       <button className="addBtn" onClick={onAdd}>
         +
